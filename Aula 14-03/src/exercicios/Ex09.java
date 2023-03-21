@@ -27,27 +27,27 @@ public class Ex09 {
 		String mensagem = "";
 		
 		if (num1 > media) {
-			mensagem += "O número "+num1+" é maior que a média \n";
+			mensagem += +num1+" ";
 		}
 		
 		if (num2 > media) {
-			mensagem += "O número "+num2+" é maior que a média \n";
+			mensagem += +num2+" ";
 		}
 		
 		if (num3 > media) {
-			mensagem += "O número "+num3+" é maior que a média \n";
+			mensagem += +num3+" ";
 		}
 		
 		if (num4 > media) {
-			mensagem += "O número "+num4+" é maior que a média \n";
+			mensagem += +num4+" ";
 		}
 		
 		if (num5 > media) {
-			mensagem += "O número "+num5+" é maior que a média \n";
+			mensagem += +num5+" ";
 		}
 		
 		System.out.println("Média final: "+media);
-		System.out.println(mensagem);
+		System.out.println("Valores maiores que a média: "+mensagem);
 
 	}
 
