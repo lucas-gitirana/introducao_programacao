@@ -10,7 +10,7 @@ public class Ex07 {
 		System.out.println("Informe um número: ");
 		int num = s.nextInt();
 		
-		boolean isPar = (num % 2) == 0
+		boolean isPar = (num % 2) == 0;
 		
 		if (isPar) {
 			System.out.println("O número é par");
