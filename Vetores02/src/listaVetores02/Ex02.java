@@ -13,24 +13,19 @@ public class Ex02 {
 		}
 				
 		String vetor = "";
-		int maior = 0;
-		int menor = 0;
+		int maior = v[0];
+		int menor = v[0];
 		int contPrimos = 0;
 		for(int i = 0; i<v.length; i++) {
 			vetor += v[i]+" ";
 			
-			// Maior e menor valores movimentados
-			if(i == 0) {
-				maior = v[i];
-				menor = v[i];
-			}else {
+			// Maior e menor valores movimentado
 				if(v[i] > maior) {
 					maior = v[i];
 				}
 				if(v[i] < menor) {
 					menor = v[i];
 				}
-			}
 			
 			// Existe número primo?
 			boolean isPrimo = true;
