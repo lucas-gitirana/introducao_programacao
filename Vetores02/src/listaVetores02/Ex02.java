@@ -5,11 +5,11 @@ public class Ex02 {
 	public static void main(String[] args) {
 		int v[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
 		
-		int aux = 0;
+		int aux = 0;		
 		for(int i = 0; i < (v.length / 2); i++) {
 			aux = v[i];
 			v[i] = v[8+i];
-			v[8+i] = aux; 
+			v[8+i] = aux;						
 		}
 				
 		String vetor = "";
@@ -44,7 +44,7 @@ public class Ex02 {
 				contPrimos++;
 			}
 		}
-		System.out.println("Vetor final: [ "+vetor+"]");
+		System.out.println("Vetor final: [ "+vetor+"]");		
 		System.out.println("Maior valor: "+maior);
 		System.out.println("Menor valor: "+menor);
 		System.out.println("Quantidade de números primos encontrados: "+contPrimos);
@@ -54,7 +54,14 @@ public class Ex02 {
 		for(int i = 8; i < v.length; i++ ) {
 			soma += v[i];
 		}
-		System.out.println("Média da segunda metade do vetor: "+(soma/8));
+		System.out.println("Média dos valores movimentados para a segunda metade do vetor: "+(soma/8));
+		
+		// Somatório da segunda metade
+		int somaPrimeira = 0;
+		for(int i = 0; i < v.length/2; i++ ) {
+			somaPrimeira += v[i];
+		}
+		System.out.println("Somatorio dos números que foram movimentados para a primeira metade do vetor: "+somaPrimeira);
 	}
 
 }
