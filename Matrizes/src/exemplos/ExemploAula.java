@@ -6,7 +6,13 @@ import java.util.Scanner;
 public class ExemploAula {
 
 	public static void main(String[] args) {
-		int[][] m = new int[2][2];
+		int[][] m = {
+				{8,1,2,5,4},
+				{10,11,20,2,3},
+				{12,8,23,1,23},
+				{23,1,11,12,20},
+				{8,12,18,11,20}
+		};
 		Scanner s = new Scanner(System.in);
 		
 		// VALOR RANDÔMICO
@@ -19,14 +25,6 @@ public class ExemploAula {
 		 			 };
 		 
 		*/
-		
-		for(int i = 0; i < m.length; i++) {
-			for(int j = 0; j < m[0].length; j++) {
-				System.out.println("Informe um valor para a posição ["+i+"]["+j+"]: ");
-				m[i][j] = s.nextInt();
-				//m[i][j] = gerador.nextInt(10,99);
-			}			
-		}
 		
 		int maior = m[0][0];
 		int menor = m[0][0];
@@ -54,7 +52,7 @@ public class ExemploAula {
 		int contMaior = 0;
 		int soma = 0;
 		for(int i = 0; i<m.length; i++) {
-			boolean primo = true;
+			
 			for(int j = 0; j<m[0].length; j++) {
 				
 				if(m[i][j] == maior) {
@@ -68,6 +66,7 @@ public class ExemploAula {
 				// encontrando primo
 				String binario = "";
 				if(m[i][j] != 1) {
+					boolean primo = true;
 					for(int x = 2; x < m[i][j]; x++) {
 						if(m[i][j] % x == 0) {
 							primo = false;
