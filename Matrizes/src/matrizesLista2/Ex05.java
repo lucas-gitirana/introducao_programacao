@@ -24,27 +24,25 @@ public class Ex05 {
 		
 		// apresentando a matriz
 		int contTrocas = 0;
+		int contIguais = 0;
 		for(int i = 0; i < m.length; i++) {
 			for(int j = 0; j < m[0].length; j++) {
 				System.out.print(m[i][j]+" ");
 				if(m[i][j] != m[j][i]) {
 					contTrocas++;
+				}else {
+					contIguais++;					
 				}
 			}
 			System.out.println("");
 		}
 		
-		// fazendo a troca de linhas por colunas
-		int contIguais = 0;
+		// fazendo a troca de linhas por colunas		
 		for(int i = 0; i < m.length; i++) {
 			for(int j = i; j < m[0].length; j++) {								
 				int aux = m[i][j];
 				m[i][j] = m[j][i];
 				m[j][i] = aux;				
-				
-				if(m[i][j] == m[j][i]) {
-					contIguais++;
-				}
 			}
 		}
 		
@@ -57,7 +55,7 @@ public class Ex05 {
 		}
 		
 		//a)  Quantos valores trocados de posição são iguais entre si		
-		System.out.println("Valores trocados iguais entre si: "+contIguais);
+		System.out.println("Valores trocados iguais entre si: "+(contIguais - m.length));
 
 		//b) Quantas trocas foram feitas no total
 		System.out.println("Total de trocas: "+(contTrocas));
