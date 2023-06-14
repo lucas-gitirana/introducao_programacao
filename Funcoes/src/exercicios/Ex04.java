@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Ex04 {
 	public static double somaRaizes(double a, double b, double c) {
 		if(a != 0) {
-			double x1 = ((-b) + (Math.sqrt(Math.pow(b, 2) - 4*a*c))) / 2*a;
-			double x2 = ((-b) - (Math.sqrt(Math.pow(b, 2) - 4*a*c))) / 2*a;
+			double delta = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
+			double x1 = (-b + delta) / 2*a;
+			double x2 = (-b - delta) / 2*a;
 			return x1+x2;
 		}else {
 			return Double.NaN;
